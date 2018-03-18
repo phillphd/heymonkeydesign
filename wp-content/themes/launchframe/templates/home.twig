@@ -1,14 +1,203 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
+
+<div class="density">
+	<div class="density__angle density__angle--top"></div>
+	<div class="density__badge">
+		{% include 'assets/src/img/logo-big.svg' %}
+	</div>
+	<div class="density__content">
+		<div class="text-block">
+			<div class="text-block__fs-1">
+				Hand-crafted from pixel to print
+			</div>
+			<div class="text-block__fs-2">
+				Branding, design, illustration
+			</div>
+			<div class="text-block__fs-3">
+    			Hand-pulled screen printing
+    		</div>
+    		<div class="text-block__with-arrow">
+    			<div  class="text-block__arrow">
+    				{% include 'assets/src/img/icon-arrow-yellow.svg' %}
+    			</div>
+    			<div class="text-block__fs-4">
+					What does that mean?
 				</div>
-			</section>
-		</article>
-	</div><!-- /content-wrapper -->
+				<div class="text-block__fs-5">
+    				Simple really, it means I make
+    			</div>
+    			<div class="text-block__fs-6">
+					things look great for you
+				</div>
+			</div>
+		</div>
+		<div class="video-block">
+			<div class="video-block__icon">
+				{% include 'assets/src/img/icon-video.svg' %}
+			</div>
+			<div class="video-block__text">
+				{% include 'assets/src/img/watch-video.svg' %}
+			</div>
+		</div>
+	</div>
+	<div class="density__statement">
+		<h4>What are you interested in today?</h4>
+	</div>
+	<div class="density__angle density__angle--bottom"></div>
+	<div class="density__halftone" style="background-image: url('{{ theme.link }}/assets/src/img/halftone.png');"></div>
+</div>
+<div class="density__down-arrow">
+	{% include 'assets/src/img/icon-arrow.svg' %}
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="masonry">
+				<div class="masonry__row">
+					<div class="masonry__column">
+						<div class="masonry-card">
+							<div class="masonry-card__title">
+								<div class="card-subtitle">100% Water Based</div>
+								<div class="card-title">Screen Printing</div>
+							</div>
+						</div>
+					</div>
+					<div class="masonry__column">
+						<div class="masonry-card">
+							<div class="masonry-card__title">
+								<div class="card-subtitle">100% Water Based</div>
+								<div class="card-title">Screen Printing</div>
+							</div>
+						</div>
+					</div>
+					<div class="masonry__column">
+						<div class="masonry-card">
+							<div class="masonry-card__title">
+								<div class="card-subtitle">100% Water Based</div>
+								<div class="card-title">Screen Printing</div>
+							</div>
+						</div>
+						<div class="masonry-card">
+							<div class="masonry-card__title">
+								<div class="card-subtitle">100% Water Based</div>
+								<div class="card-title">Screen Printing</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="masonry__row masonry__row--short">
+					<div class="masonry__column">
+						<div class="masonry-card">
+							<div class="masonry-card__title">
+								<div class="card-subtitle">100% Water Based</div>
+								<div class="card-title">Screen Printing</div>
+							</div>
+						</div>
+					</div>
+					<div class="masonry__column">
+						<div class="masonry-card">
+							<div class="masonry-card__title">
+								<div class="card-subtitle">100% Water Based</div>
+								<div class="card-title">Screen Printing</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="divider">
+				{% include 'assets/src/img/icon-fez.svg' %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{# NEWSLETTER #}
+
+<div class="upcoming-events">
+	<div class="density__halftone" style="background-image: url('http://heymonkeydesign.local/wp-content/themes/launchframe/assets/src/img/halftone.png');"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="upcoming-events__header">Upcoming Workshops</div>
+				<div class="upcoming-events__subheader">&amp; Events</div>
+				<div class="upcoming-events__events">
+					<div class="event-card">
+						<div class="event-card__details">Jan 25 | Workshop</div>
+						<div class="event-card__title">Screen Print Pro</div>
+						<a href="#!" class="event-card__button">Register</a>
+					</div>
+					<div class="event-card">
+						<div class="event-card__details">Jan 25 | Workshop</div>
+						<div class="event-card__title">Screen Print Pro</div>
+						<a href="#!" class="event-card__button">Register</a>
+					</div>
+					<div class="event-card">
+						<div class="event-card__details">Jan 25 | Workshop</div>
+						<div class="event-card__title">Screen Print Pro</div>
+						<a href="#!" class="event-card__button">Register</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="upcoming-events__more more-events">
+		<div class="more-events__icon">{% include 'assets/src/img/icon-arrow.svg' %}</div>
+		<a href="#!" class="more-events__button">More Information</a>
+	</div>
+</div>
+
+<div class="the-studio" style="background-image: url('{{ theme.link }}/assets/src/img/placeholder-studio.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="the-studio__meta">
+					<div class="the-studio__subtitle">Hand-Forged In</div>
+					<div class="the-studio__title">Durham, North Carolina</div>
+				</div>
+				<div class="the-studio__badge studio-badge" style="background-image: url('{{ theme.link }}/assets/src/img/studio-badge.jpg');">
+					<div class="studio-badge__meta">
+						<div class="studio-badge__subtitle">Check Out</div>
+						<div class="studio-badge__title">The Studio</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="hey-yall">
+				<div class="hey-yall__hey">
+					Hey!
+				</div>
+				<div class="hey-yall__about">
+					{% include 'assets/src/img/hey.svg' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="big-statement" style="background-image: url('{{ theme.link }}/assets/src/img/placeholder-pull.jpg');">
+	<div class="container" style="position: relative; height: 100%;">
+		<div class="big-statement__banner">
+			<div class="big-statement__banner-text">
+				Whatever we do together, we will have a great time doing it!
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}

@@ -8,28 +8,38 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 		<header class="site-header">
-			{% block header %}
-			{% endblock %}
-      {% include 'nav.twig' %}
+			<div class="container">
+				<div class="row">
+					<div class="col" style="padding: 0;">
+						<div class="site-header__logo">
+							{% include 'assets/src/img/logo-nav.svg' %}
+						</div>
+						<div class="site-header__menus">
+							{% include 'nav.twig' %}
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 
 		<main class="site-main">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-      <section class="primary-content">
+  			<section class="primary-content">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
-      </section>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
+  			</section>
 		</main>
 
 		{% block footer %}
 			<footer class="site-footer">
-				{% include 'footer.twig' %}
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							{% include 'footer.twig' %}
+						</div>
+					</div>
+				</div>
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}

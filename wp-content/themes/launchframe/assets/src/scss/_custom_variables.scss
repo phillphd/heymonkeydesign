@@ -29,7 +29,12 @@
 //$gray-lighter:              #eceeef;
 //$gray-lightest:             #f7f7f9;
 
-//$brand-primary:             #0275d8;
+
+$black:                     #000;
+$white:                     #FFF;
+$yellow:                    #F5A623;
+$red:                       #C1292E;
+$brand-primary:             $yellow;
 //$brand-success:             #5cb85c;
 //$brand-info:                #5bc0de;
 //$brand-warning:             #f0ad4e;
@@ -81,30 +86,25 @@
 // Define the minimum and maximum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-//$grid-breakpoints: (
-  // Extra small screen / phone
-  //xs: 0,
-  // Small screen / phone
-  //sm: 34em,
-  // Medium screen / tablet
-  //md: 48em,
-  // Large screen / desktop
-  //lg: 62em,
-  // Extra large screen / wide desktop
-  //xl: 75em
-//);
+$grid-breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 768px,
+   lg: 992px,
+   xl: 1440px
+);
 
 
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-//$container-max-widths: (
-//  sm: 34rem,    // 480
- // md: 45rem,    // 720
- // lg: 60rem,    // 960
- // xl: 72.25rem  // 1140
-//);
+$container-max-widths: (
+   sm: 540px,
+   md: 720px,
+   lg: 960px,
+   xl: 1325px
+);
 
 
 // Grid columns
@@ -119,10 +119,10 @@
 //
 // Font, line-height, and color for body text, headings, and more.
 
-//$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:     "futura-pt-bold", "futura-pt",sans-serif;;
 //$font-family-serif:          Georgia, "Times New Roman", Times, serif;
 //$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
-//$font-family-base:           //$font-family-sans-serif;
+$font-family-base:           $font-family-sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 //$font-size-root:             16px;

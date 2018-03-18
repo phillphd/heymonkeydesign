@@ -1,0 +1,470 @@
+.density {
+	position: relative;
+	overflow: hidden;
+	height: 900px;
+	padding: 235px 0 55px;
+	&__halftone {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		pointer-events: none;
+		opacity: .3;
+	}
+	&__angle {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		&::after {
+			position: absolute;
+			left: -10px;
+			width: calc(100% + 20px);
+			height: 100px;
+			background-color: $white;
+			content: "";
+			transform-origin: 0% 100%;
+		}
+		&--top {
+			top: 0;
+			height: 108px;
+			background-color: $red;
+			&::after {
+				bottom: 0;
+				transform: translateY(100%) rotate(-1deg);
+			}
+		}
+		&--bottom {
+			bottom: 0;
+			height: 172px;
+			background-color: $yellow;
+			&::after {
+				top: 0;
+				transform: translateY(-100%) rotate(2deg);
+			}
+		}
+	}
+	&__badge {
+		position: absolute;
+		top: 47%;
+		left: 50%;
+		z-index: 9;
+		transform: translateY(-50%) translateX(calc(-100% - 35px));
+	}
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 9;
+		transform: translateY(-50%) translateX(35px);
+	}
+	&__statement {
+		position: absolute;
+		bottom: 55px;
+		left: 0;
+		z-index: 9;
+		width: 100%;
+		text-align: center;
+	}
+	&__down-arrow {
+		position: relative;
+		svg {
+			position: absolute;
+			top: -45px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+.text-block {
+	position: relative;
+	line-height: 1.2;
+	text-transform: uppercase;
+	&__fs-1 {
+		font-size: 25px;
+		letter-spacing: 4px;
+	}
+	&__fs-2 {
+		font-family: "Authority";
+		font-size: 50px;
+		line-height: 1.1;
+		letter-spacing: .1px;
+	}
+	&__fs-3 {
+		font-family: "Authority";
+		font-size: 53px;
+		line-height: 1.1;
+		letter-spacing: -.2px;
+	}
+	&__fs-4 {
+		font-size: 30px;
+		letter-spacing: 5.4px;
+		color: $yellow;
+	}
+	&__fs-5 {
+		font-size: 22px;
+		letter-spacing: 4px;
+	}
+	&__fs-6 {
+		font-size: 31px;
+		letter-spacing: -.2px;
+	}
+	&__with-arrow {
+		position: relative;
+		padding-left: 125px;
+	}
+	&__arrow {
+		position: absolute;
+		top: 5px;
+		left: -60px;
+	}
+}
+.video-block {
+	position: relative;
+	margin-top: 45px;
+	&__icon {
+		svg {
+			display: block;
+		}
+	}
+	&__text {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: calc(100% - 218px);
+		height: 100%;
+		background-color: #210000;
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.masonry {
+	margin: 50px -10px 20px;
+	&__row {
+		display: flex;
+		height: 380px;
+		flex-direction: row;
+		&--short {
+			height: 150px;
+		}
+	}
+	&__column {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+}
+.masonry-card {
+	position: relative;
+	height: 100%;
+	margin: 10px;
+	background-color: $black;
+	&__title {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		transform: translateY(-50%);
+	}
+	.card-subtitle {
+		margin-bottom: 4px;
+		font-family: "ROBU";
+		font-size: 24px;
+		line-height: 1;
+		color: $yellow;
+	}
+	.card-title {
+		font-size: 20px;
+		line-height: 1;
+		letter-spacing: 2px;
+		color: $white;
+		text-transform: uppercase;
+	}
+}
+
+.divider {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.upcoming-events {
+	position: relative;
+	padding: 140px 0 120px;
+	background-color: $yellow;
+	&::after {
+		position: absolute;
+    	top: 0;
+    	left: 0;
+    	z-index: 999;
+    	width: 100%;
+    	height: 44px;
+    	background-color: $white;
+    	clip-path: polygon(0 0, 0 100%, 100% 0);
+    	-webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+    	content: "";
+	}
+	&__header {
+		font-family: "Authority";
+		font-size: 8.75rem;
+		line-height: .8;
+		letter-spacing: .3px;
+		text-align: center;
+		color: $white;
+	}
+	&__subheader {
+		margin-bottom: 22px;
+		font-family: "ROBU";
+		font-size: 4rem;
+		letter-spacing: .1px;
+		text-align: center;
+		color: $white;
+	}
+	&__events {
+		display: flex;
+		flex-direction: row;
+		margin: 0 -10px;
+	}
+	&__more {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 9;
+		width: 100%;
+	}
+}
+.more-events {
+	&__icon {
+		position: absolute;
+		top: -26px;
+		left: 50%;
+		z-index: -1;
+		transform: translate(-50%, -50%) rotate(180deg);
+	}
+	&__button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 9;
+		display: inline-block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 400px;
+		height: 75px;
+		padding: 0 30px;
+		font-size: 1.75rem;
+		line-height: 75px;
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		background-color: $red;
+		transform: translateY(50%);
+		transition: .25s;
+		&:hover {
+			color: $red;
+			text-decoration: none;
+			background-color: $white;
+		}
+	}
+}
+.event-card {
+	position: relative;
+	width: calc(100% - 20px);
+	height: 420px;
+	margin: 0 10px;
+	background-color: $black;
+	&__details {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px 35px;
+		font-size: 1.75rem;
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		background-color: $red;	
+	}
+	&__title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		padding: 0 35px;
+		font-family: "Authority";
+		font-size: 3.375rem;
+		line-height: .9;
+		text-align: center;
+		color: $white;
+		transform: translate(-50%, -50%);
+	}
+	&__button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: inline-block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 250px;
+		height: 75px;
+		padding: 0 30px;
+		font-size: 1.75rem;
+		line-height: 75px;
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		background-color: $red;
+		transition: .25s;
+		&:hover {
+			color: $red;
+			text-decoration: none;
+			background-color: $white;
+		}
+	}
+}
+
+.the-studio {
+	position: relative;
+	height: 668px;
+	padding: 235px 0 305px;
+	background-size: cover;
+	background-position: center;
+	&__meta {
+		line-height: 1;
+		color: $white;
+		text-align: center;
+	}
+	&__subtitle {
+		margin-bottom: 20px;
+		font-size: 22px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+	&__title {
+		font-family: "ROBU";
+		font-size: 72px;
+	}
+}
+
+.studio-badge {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 400px;
+	height: 400px;
+	font-size: 30px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 400px;
+	transform: translateY(calc(100% + 20px));
+	&__meta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		line-height: 1;
+		color: $white;
+		text-align: center;
+		transform: translate(-50%, -50%);
+	}
+	&__subtitle {
+		font-family: "ROBU";
+	}
+	&__title {
+		margin-bottom: 5px;
+		letter-spacing: .2px;
+		text-transform: uppercase;
+	}
+}
+
+.hey-yall {
+	position: relative;
+	margin: 50px 0 80px;
+	&__hey {
+		font-family: "Authority";
+		font-size: 15.0625rem;
+		line-height: .85;
+		color: $yellow;
+	}
+	&__about {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.big-statement {
+	position: relative;
+	height: 668px;
+	background-size: cover;
+	background-position: center;
+	&__banner {
+		position: absolute;
+		top: -29px;
+		left: 15px;
+		width: 372px;
+		height: calc(100% + 29px);
+		background-color: $yellow;
+		&::after {
+			position: absolute;
+			top: 0;
+			right: -23px;
+			width: 0;
+			height: 0;
+			border-bottom: 29px solid #C97F27;
+			border-right: 23px solid transparent;
+			content: "";
+		}
+		&::before {
+			position: absolute;
+			bottom: -75px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 186px solid transparent;
+			border-right: 186px solid transparent;
+			border-top: 75px solid $yellow;
+			content: "";
+		}
+	}
+	&__banner-text {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		padding: 110px 35px;
+		font-size: 28px;
+		letter-spacing: 3.5px;
+		line-height: 52px;
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		transform: translate(-50%, -50%);
+		&::after,
+		&::before {
+			position: absolute;
+			right: 0;
+			left: 0;
+			width: calc(100% - 84px);
+			height: 2px;
+			margin: 0 auto;
+			background-color: $white;
+			content: "";
+		}
+		&::after {
+			top: 0;
+		}
+		&::before {
+			bottom: 0;
+		}
+	}
+}

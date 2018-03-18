@@ -1,0 +1,18 @@
+<svg width="186px" height="47px" viewBox="0 0 186 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Home-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1049.000000, -708.000000)" font-weight="bold">
+        <g id="Masthead" transform="translate(0.000000, 149.000000)">
+            <g id="Video" transform="translate(731.000000, 521.262743)">
+                <g id="Group-3" transform="translate(318.000000, 33.000000)">
+                    <text id="OUR-BRAND-STORY" font-family="Futura-Bold, Futura" font-size="18" letter-spacing="0.16" fill="#FFFFFF">
+                        <tspan x="0.0312" y="50.4621604">OUR BRAND STO</tspan>
+                        <tspan x="161.1952" y="50.4621604" letter-spacing="-0.5564">R</tspan>
+                        <tspan x="172.1588" y="50.4621604">Y</tspan>
+                    </text>
+                    <text id="Watch" font-family="ROBU-Bold, ROBU" font-size="24" fill="#F49D2C">
+                        <tspan x="56.0312" y="30.1921416">Watch</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

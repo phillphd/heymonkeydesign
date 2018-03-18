@@ -1,0 +1,65 @@
+.newsletter {
+	&__header {
+		text-align: left;
+	}
+	&__form {
+
+	}
+	&__footer {
+		font-size: 14px;
+		line-height: 23px;
+		letter-spacing: 2px;
+		text-align: left;
+		color: $yellow;
+		text-transform: uppercase;
+	}
+}
+
+.newsletter-header {
+	&__title {
+		display: inline;
+		width: 240px;
+		font-family: "ROBU";
+		font-size: 3.0625rem;
+		color: $yellow;
+	}
+	&__subtitle {
+		display: inline;
+		font-size: 14px;
+		line-height: 23px;
+		letter-spacing: 2px;
+		color: $white;
+		text-transform: uppercase;
+	}
+}
+
+.newsletter-form {
+	position: relative;
+	height: 88px;
+	margin: 4px 0 22px;
+	&__email {
+		width: 100%;
+		height: 88px;
+		padding-left: 32px;
+		font-size: 1.5rem;
+		background-color: $white;
+		border: 0;
+		box-shadow: 0;
+	}
+	&__submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 260px;
+		font-size: 1.875rem;
+		letter-spacing: 8px;
+		line-height: 88px;
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		background-color: $red;
+		border: 0;
+		box-shadow: 0;
+	}
+}

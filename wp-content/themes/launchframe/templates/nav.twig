@@ -1,17 +1,19 @@
 {% block site_nav %}
+
 <nav>
-  <ul class="main-nav">
-    {% for item in menu.get_items %}
-        <li class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
-          {% if item.get_children %}
-            <ul class="nav-drop">
-             {% for child in item.get_children %}
-              <li class="nav-drop-item"><a href="{{child.get_link}}">{{child.title}}</a></li>
-             {% endfor %}
-            </ul>
-           {% endif %}
-        </li>
-    {% endfor %}
-  </ul>
+    <ul class="site-header__ul site-header__ul--secondary">
+        <li><a>About</a></li>
+        <li><a>Blog</a></li>
+        <li><a>Store</a></li>
+        <li><a>Hire Me!</a></li>
+    </ul>
+    <ul class="site-header__ul">
+        <li><a>My Work</a></li>
+        <li><a>Brand &amp; Illustration</a></li>
+        <li><a>Print Services</a></li>
+        <li><a>Workshops</a></li>
+        <li><a>Speaking</a></li>
+    </ul>
 </nav>
+
 {% endblock %}

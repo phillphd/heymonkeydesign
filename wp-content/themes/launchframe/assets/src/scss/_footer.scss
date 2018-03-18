@@ -1,0 +1,95 @@
+.site-footer {
+	padding: 62px 0 10px;
+	text-align: center;
+	background-color: $black;
+	&__row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: no-wrap;
+		border-bottom: 2px solid $white;
+		&:first-child .site-footer__col {
+			padding-top: 86px;
+		}
+	}
+	&__col {
+		padding: 22px 40px;
+		border-right: 2px solid $white;
+		&:last-child {
+			border-right: 0;
+		}
+		&--4 {
+			width: 33%;
+		}
+		&--8 {
+			width: 66%;
+		}
+	}
+	&__base {
+		padding: 47px 0;
+	}
+}
+
+.contact {
+	&__title {
+		color: $yellow;
+	}
+	&__details {
+		color: $white;
+	}
+}
+
+.parking {
+	position: relative;
+	display: inline-block;
+	padding-left: 44px;
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		content: "";
+	}
+	&__title,
+	&__info {
+		line-height: 32px;
+		color: $white;
+		text-transform: uppercase;
+	}
+	&__title {
+		margin-bottom: 0;
+	}
+	&__info {
+		font-size: 18px;
+	}
+}
+
+.social-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+	&__item {
+		display: inline-block;
+		width: 24%;
+	}
+}
+.social-item {
+	text-align: center;
+	&__icon {
+		margin-bottom: 14px;
+	}
+	&__name {
+		font-size: 24px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		transition: .2s;
+	}
+	a {
+		color: $yellow;
+		transition: .2s;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
