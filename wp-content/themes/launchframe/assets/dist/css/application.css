@@ -1586,7 +1586,7 @@ h4,
       width: 100%; }
       @media (min-width: 992px) {
         .site-footer__col--8 {
-          width: 66%; } }
+          width: 67%; } }
   .site-footer__base {
     padding: 47px 0; }
 
@@ -1621,6 +1621,7 @@ h4,
     @media (min-width: 576px) {
       .parking__info {
         font-size: 18px;
+        letter-spacing: 0;
         text-align: left; } }
 
 .social-list {

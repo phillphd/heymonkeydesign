@@ -2,7 +2,7 @@
     <g id="Main-Navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-77.000000, -23.000000)">
         <g id="Group">
             <g transform="translate(76.000000, 23.000000)">
-                <text id="HEY!-MONKEY" font-family="Futura-Bold, Futura" font-size="18" font-weight="bold" letter-spacing="0.112500004" fill="#F5A623">
+                <text id="HEY!-MONKEY" font-family="futura-pt-bold, futura-pt, sans-serif" font-size="18" font-weight="bold" letter-spacing="0.112500004" fill="#F5A623">
                     <tspan x="0" y="84">HEY! MONKEY</tspan>
                 </text>
                 <g id="Fez" transform="translate(8.000000, 0.000000)">
