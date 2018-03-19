@@ -17,7 +17,10 @@
 		}
 	}
 	&__col {
-		padding: 22px 40px;
+		padding: 16px;
+		@include media-breakpoint-up(sm) {
+			padding: 22px 40px;
+		}
 		@include media-breakpoint-up(lg) {
 			border-right: 2px solid $white;
 		}
@@ -64,16 +67,23 @@
 	}
 	&__title,
 	&__info {
-		line-height: 32px;
+		line-height: 22px;
 		color: $white;
 		text-transform: uppercase;
+		@include media-breakpoint-up(sm) {
+			line-height: 32px;
+		}
 	}
 	&__title {
 		margin-bottom: 0;
 	}
 	&__info {
-		font-size: 18px;
-		text-align: left;
+		font-size: 16px;
+		letter-spacing: 1px;
+		@include media-breakpoint-up(sm) {
+			font-size: 18px;
+			text-align: left;
+		}
 	}
 }
 
@@ -90,19 +100,32 @@
 .social-item {
 	text-align: center;
 	&__icon {
-		margin-bottom: 14px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 14px;
+		}
 	}
 	&__name {
-		font-size: 18px;
-		letter-spacing: 3px;
+		display: none;
+		font-size: 16px;
+		letter-spacing: 1px;
 		text-transform: uppercase;
 		transition: .2s;
+		@include media-breakpoint-up(sm) {
+			display: block;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+			letter-spacing: 3px;
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: 24px;
 		}
 	}
 	svg {
-		max-width: 40px;
+		max-width: 34px;
+		@include media-breakpoint-up(sm) {
+			max-width: 40px;
+		}
 		@include media-breakpoint-up(lg) {
 			max-width: 60px;
 		}	

@@ -5,8 +5,17 @@
 	&__logo {
 		position: absolute;
 		top: 50%;
-		left: 0;
+		left: 10px;
 		transform: translateY(-50%);
+		@include media-breakpoint-up(sm) {
+			left: 0;
+		}
+		svg {
+			max-height: 75px;
+			@include media-breakpoint-up(sm) {
+				max-height: 85px;
+			}
+		}
 	}
 	&__menus {
 		float: right;
@@ -49,9 +58,12 @@
 	display: block;
 	width: 35px;
 	height: 35px;
-	margin: 10px 0;
+	margin: 10px 10px;
 	border-top: 5px solid $white;
 	border-bottom: 5px solid $white;
+	@include media-breakpoint-up(sm) {
+		margin: 10px 0;
+	}
 	@include media-breakpoint-up(lg) {
 		display: none;
 	}

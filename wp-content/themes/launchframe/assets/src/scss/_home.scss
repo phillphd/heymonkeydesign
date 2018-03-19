@@ -1,7 +1,10 @@
 .density {
 	position: relative;
 	overflow: hidden;
-	padding: 135px 0 235px;
+	padding: 100px 0 200px;
+	@include media-breakpoint-up(sm) {
+		padding: 135px 0 235px;
+	}
 	@include media-breakpoint-up(xl) {
 		height: 900px;
 		padding: 235px 0 55px;
@@ -36,8 +39,11 @@
 		}
 		&--top {
 			top: 0;
-			height: 108px;
+			height: 70px;
 			background-color: $red;
+			@include media-breakpoint-up(sm) {
+				height: 108px;
+			}
 			&::after {
 				bottom: 0;
 				transform: translateY(100%) rotate(-1deg);
@@ -65,6 +71,13 @@
 			margin: 0;
 			text-align: left;
 			transform: translateY(-50%) translateX(calc(-100% - 35px));
+		}
+		svg {
+			max-width: 100%;
+			max-height: 300px;
+			@include media-breakpoint-up(sm) {
+				max-height: 567px;
+			}
 		}
 	}
 	&__content {
@@ -104,20 +117,42 @@
 	line-height: 1.2;
 	text-transform: uppercase;
 	&__fs-1 {
-		font-size: 26px;
-		letter-spacing: 5.5px;
+		font-size: 16px;
+		letter-spacing: 1px;
+		@include media-breakpoint-up(sm) {
+			font-size: 22px;
+			letter-spacing: 5.2px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 26px;
+			letter-spacing: 5.5px;
+		}
 	}
 	&__fs-2 {
 		font-family: "Authority";
-		font-size: 50px;
+		font-size: 38px;
 		line-height: 1.1;
-		letter-spacing: .1px;
+		letter-spacing: 1px;
+		@include media-breakpoint-up(sm) {
+			font-size: 44px;
+			letter-spacing: .1px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 50px;
+		}
 	}
 	&__fs-3 {
 		font-family: "Authority";
-		font-size: 54px;
+		font-size: 38px;
 		line-height: 1.1;
-		letter-spacing: -.2px;
+		letter-spacing: 1px;
+		@include media-breakpoint-up(sm) {
+			font-size: 48px;
+			letter-spacing: -.2px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 54px;
+		}
 	}
 	&__fs-4 {
 		display: none;
@@ -263,11 +298,18 @@
 	}
 	&__header {
 		font-family: "Authority";
-		font-size: 4.6rem;
-		line-height: .8;
+		font-size: 3rem;
+		line-height: 1;
 		letter-spacing: .3px;
 		text-align: center;
 		color: $white;
+		@include media-breakpoint-up(sm) {
+			font-size: 4rem;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 4.6rem;
+			line-height: .8;
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: 6.2rem;
 		}
@@ -278,10 +320,13 @@
 	&__subheader {
 		margin-bottom: 22px;
 		font-family: "ROBU";
-		font-size: 2.75rem;
+		font-size: 2rem;
 		letter-spacing: .1px;
 		text-align: center;
 		color: $white;
+		@include media-breakpoint-up(sm) {
+			font-size: 2.75rem;
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: 3rem;
 		}
@@ -346,7 +391,7 @@
 	position: relative;
 	width: calc(100% - 20px);
 	height: 340px;
-	margin: 20px 0;
+	margin: 20px auto;
 	background-color: $black;
 	@include media-breakpoint-up(lg) {
 		height: 380px;
@@ -377,11 +422,15 @@
 		width: 100%;
 		padding: 0 35px;
 		font-family: "Authority";
-		font-size: 2.75rem;
-		line-height: .9;
+		font-size: 2.25rem;
+		line-height: 1.1;
 		text-align: center;
 		color: $white;
 		transform: translate(-50%, -50%);
+		@include media-breakpoint-up(md) {
+			font-size: 2.75rem;
+			line-height: .9;
+		}
 		@include media-breakpoint-up(xl) {
 			font-size: 3.375rem;
 		}
@@ -422,10 +471,16 @@
 	&__header {
 		margin-bottom: 8px;
 		font-family: "Authority";
-		font-size: 4.8rem;
+		font-size: 3rem;
 		line-height: 1;
 		color: $yellow;
 		text-align: center;
+		@include media-breakpoint-up(sm) {
+			font-size: 4rem;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 4.8rem;
+		}
 		@include media-breakpoint-up(xl) {
 			font-size: 6.75rem;
 			text-align: left;
@@ -505,10 +560,13 @@
 
 .the-studio {
 	position: relative;
-	height: 668px;
-	padding: 235px 0 305px;
+	padding: 180px 0;
 	background-size: cover;
 	background-position: center;
+	@include media-breakpoint-up(md) {
+		height: 668px;
+		padding: 235px 0 305px;
+	}
 	&__meta {
 		line-height: 1;
 		color: $white;
@@ -516,13 +574,20 @@
 	}
 	&__subtitle {
 		margin-bottom: 20px;
-		font-size: 22px;
-		letter-spacing: 3px;
+		font-size: 16px;
+		letter-spacing: 2px;
 		text-transform: uppercase;
+		@include media-breakpoint-up(md) {
+			font-size: 22px;
+			letter-spacing: 3px;
+		}
 	}
 	&__title {
 		font-family: "ROBU";
-		font-size: 72px;
+		font-size: 42px;
+		@include media-breakpoint-up(md) {
+			font-size: 72px;
+		}
 	}
 }
 
@@ -537,16 +602,15 @@
 	background-position: center;
 	border-radius: 400px;
 	transform: translateY(calc(100% + 40px)) translateX(50%);
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(md) {
 		right: 0;
 		width: 300px;
 		height: 300px;
-		transform: translateY(calc(100% + 70px));
+		transform: translateY(calc(100% + 20px));
 	}
 	@include media-breakpoint-up(xl) {
 		width: 400px;
 		height: 400px;
-		transform: translateY(calc(100% + 20px));
 	}
 	&__meta {
 		position: absolute;
@@ -582,6 +646,10 @@
 		}
 	}
 	&__about {
+		opacity: 0;
+		@include media-breakpoint-up(md) {
+			opacity: 1;
+		}
 		@include media-breakpoint-up(xl) {
 			position: absolute;
 			right: 0;
@@ -595,9 +663,12 @@
 
 .big-statement {
 	position: relative;
-	height: 450px;
+	height: 350px;
 	background-size: cover;
 	background-position: center;
+	@include media-breakpoint-up(sm) {
+		height: 450px;
+	}
 	@include media-breakpoint-up(lg) {
 		height: 668px;
 	}
@@ -605,9 +676,12 @@
 		position: absolute;
 		top: -29px;
 		left: 15px;
-		width: 320px;
+		width: 280px;
 		height: calc(100% + 29px);
 		background-color: $yellow;
+		@include media-breakpoint-up(sm) {
+			width: 320px;
+		}
 		@include media-breakpoint-up(lg) {
 			width: 372px;
 		}
@@ -627,10 +701,14 @@
 			left: 0;
 			width: 0;
 			height: 0;
-			border-left: 160px solid transparent;
-			border-right: 160px solid transparent;
+			border-left: 140px solid transparent;
+			border-right: 140px solid transparent;
 			border-top: 75px solid $yellow;
 			content: "";
+			@include media-breakpoint-up(sm) {
+				border-left: 160px solid transparent;
+				border-right: 160px solid transparent;
+			}
 			@include media-breakpoint-up(lg) {
 				border-left: 186px solid transparent;
 				border-right: 186px solid transparent;
@@ -641,14 +719,19 @@
 		position: relative;
 		top: 50%;
 		left: 50%;
-		padding: 110px 35px;
-		font-size: 24px;
+		padding: 60px 35px;
+		font-size: 18px;
 		letter-spacing: 2px;
-		line-height: 42px;
+		line-height: 36px;
 		text-align: center;
 		color: $white;
 		text-transform: uppercase;
 		transform: translate(-50%, -50%);
+		@include media-breakpoint-up(sm) {
+			padding: 110px 35px;
+			font-size: 24px;
+			line-height: 42px;
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: 28px;
 			letter-spacing: 3.5px;
