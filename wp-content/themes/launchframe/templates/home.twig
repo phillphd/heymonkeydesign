@@ -121,10 +121,41 @@
 	</div>
 </div>
 
-{# NEWSLETTER #}
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="signup">
+				<div class="signup__header">
+					Sign Up for the Newsletter!
+				</div>
+				<div class="signup__body">
+					<div class="signup__sidebar">
+						<div class="susb-wrapper">
+							<div class="susb">
+								<span class="susb__type susb__type--1">Hey! Monkey</span>
+								<span class="susb__type susb__type--2">Mailbag</span>
+							</div>
+							<div class="susb">
+								<span class="susb__type susb__type--3">2</span>
+								<span class="susb__type susb__type--4">Free Resource Guides</span>
+								<span class="susb__type susb__type--5">When You Sign Up!</span>
+							</div>
+							<div class="susb">
+								<span class="susb__type susb__type--6">iPad Illustration &amp; Screen Printing</span>
+							</div>
+						</div>
+					</div>
+					<div class="signup__form">
+						{% include '_partial--contact-form.twig' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class="upcoming-events">
-	<div class="density__halftone" style="background-image: url('http://heymonkeydesign.local/wp-content/themes/launchframe/assets/src/img/halftone.png');"></div>
+	<div class="density__halftone" style="background-image: url('{{ theme.link }}/assets/src/img/halftone.png');"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col">

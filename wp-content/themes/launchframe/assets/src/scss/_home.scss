@@ -1,8 +1,11 @@
 .density {
 	position: relative;
 	overflow: hidden;
-	height: 900px;
-	padding: 235px 0 55px;
+	padding: 135px 0 235px;
+	@include media-breakpoint-up(xl) {
+		height: 900px;
+		padding: 235px 0 55px;
+	}
 	&__halftone {
 		position: absolute;
 		top: 0;
@@ -23,10 +26,13 @@
 			position: absolute;
 			left: -10px;
 			width: calc(100% + 20px);
-			height: 100px;
+			height: 55px;
 			background-color: $white;
 			content: "";
 			transform-origin: 0% 100%;
+			@include media-breakpoint-up(xl) {
+				height: 100px;
+			}
 		}
 		&--top {
 			top: 0;
@@ -48,18 +54,32 @@
 		}
 	}
 	&__badge {
-		position: absolute;
-		top: 47%;
-		left: 50%;
 		z-index: 9;
-		transform: translateY(-50%) translateX(calc(-100% - 35px));
+		margin: 40px auto;
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			top: 47%;
+			left: 25%;
+			left: 50%;
+			margin: 0;
+			text-align: left;
+			transform: translateY(-50%) translateX(calc(-100% - 35px));
+		}
 	}
 	&__content {
-		position: absolute;
-		top: 50%;
-		left: 50%;
 		z-index: 9;
-		transform: translateY(-50%) translateX(35px);
+		margin: 40px auto;
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			top: 50%;
+			left: 25%;
+			left: 50%;
+			margin: 0;
+			text-align: left;
+			transform: translateY(-50%) translateX(35px);
+		}
 	}
 	&__statement {
 		position: absolute;
@@ -84,8 +104,8 @@
 	line-height: 1.2;
 	text-transform: uppercase;
 	&__fs-1 {
-		font-size: 25px;
-		letter-spacing: 4px;
+		font-size: 26px;
+		letter-spacing: 5.5px;
 	}
 	&__fs-2 {
 		font-family: "Authority";
@@ -95,22 +115,34 @@
 	}
 	&__fs-3 {
 		font-family: "Authority";
-		font-size: 53px;
+		font-size: 54px;
 		line-height: 1.1;
 		letter-spacing: -.2px;
 	}
 	&__fs-4 {
-		font-size: 30px;
-		letter-spacing: 5.4px;
+		display: none;
+		font-size: 33px;
+		letter-spacing: 6px;
 		color: $yellow;
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
 	}
 	&__fs-5 {
-		font-size: 22px;
+		display: none;
+		font-size: 25px;
 		letter-spacing: 4px;
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
 	}
 	&__fs-6 {
-		font-size: 31px;
-		letter-spacing: -.2px;
+		display: none;
+		font-size: 34px;
+		letter-spacing: .5px;
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
 	}
 	&__with-arrow {
 		position: relative;
@@ -120,11 +152,19 @@
 		position: absolute;
 		top: 5px;
 		left: -60px;
+		display: none;
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
 	}
 }
 .video-block {
 	position: relative;
+	display: none;
 	margin-top: 45px;
+	@include media-breakpoint-up(xl) {
+		display: block;
+	}
 	&__icon {
 		svg {
 			display: block;
@@ -147,24 +187,33 @@
 }
 
 .masonry {
-	margin: 50px -10px 20px;
+	margin: 50px -10px;
 	&__row {
-		display: flex;
-		height: 380px;
-		flex-direction: row;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			height: 380px;
+			flex-direction: row;
+		}
 		&--short {
-			height: 150px;
+			@include media-breakpoint-up(lg) {
+				height: 150px;
+			}
 		}
 	}
 	&__column {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
+		height: 190px;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+		}
 	}
 }
 .masonry-card {
 	position: relative;
 	height: 100%;
+	min-height: 170px;
 	margin: 10px;
 	background-color: $black;
 	&__title {
@@ -214,24 +263,38 @@
 	}
 	&__header {
 		font-family: "Authority";
-		font-size: 8.75rem;
+		font-size: 4.6rem;
 		line-height: .8;
 		letter-spacing: .3px;
 		text-align: center;
 		color: $white;
+		@include media-breakpoint-up(lg) {
+			font-size: 6.2rem;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 8.75rem;
+		}
 	}
 	&__subheader {
 		margin-bottom: 22px;
 		font-family: "ROBU";
-		font-size: 4rem;
+		font-size: 2.75rem;
 		letter-spacing: .1px;
 		text-align: center;
 		color: $white;
+		@include media-breakpoint-up(lg) {
+			font-size: 3rem;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 4rem;
+		}
 	}
 	&__events {
-		display: flex;
-		flex-direction: row;
-		margin: 0 -10px;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-direction: row;
+			margin: 0 -10px;
+		}
 	}
 	&__more {
 		position: absolute;
@@ -261,7 +324,7 @@
 		max-width: 400px;
 		height: 75px;
 		padding: 0 30px;
-		font-size: 1.75rem;
+		font-size: 1.25rem;
 		line-height: 75px;
 		text-align: center;
 		color: $white;
@@ -269,6 +332,9 @@
 		background-color: $red;
 		transform: translateY(50%);
 		transition: .25s;
+		@include media-breakpoint-up(xl) {
+			font-size: 1.75rem;
+		}
 		&:hover {
 			color: $red;
 			text-decoration: none;
@@ -279,20 +345,30 @@
 .event-card {
 	position: relative;
 	width: calc(100% - 20px);
-	height: 420px;
-	margin: 0 10px;
+	height: 340px;
+	margin: 20px 0;
 	background-color: $black;
+	@include media-breakpoint-up(lg) {
+		height: 380px;
+		margin: 0 10px;
+	}
+	@include media-breakpoint-up(xl) {
+		height: 420px;
+	}
 	&__details {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		padding: 20px 35px;
-		font-size: 1.75rem;
+		font-size: 1.15rem;
 		text-align: center;
 		color: $white;
 		text-transform: uppercase;
 		background-color: $red;	
+		@include media-breakpoint-up(xl) {
+			font-size: 1.75rem;
+		}
 	}
 	&__title {
 		position: absolute;
@@ -301,11 +377,14 @@
 		width: 100%;
 		padding: 0 35px;
 		font-family: "Authority";
-		font-size: 3.375rem;
+		font-size: 2.75rem;
 		line-height: .9;
 		text-align: center;
 		color: $white;
 		transform: translate(-50%, -50%);
+		@include media-breakpoint-up(xl) {
+			font-size: 3.375rem;
+		}
 	}
 	&__button {
 		position: absolute;
@@ -318,17 +397,108 @@
 		max-width: 250px;
 		height: 75px;
 		padding: 0 30px;
-		font-size: 1.75rem;
+		font-size: 1.25rem;
 		line-height: 75px;
 		text-align: center;
 		color: $white;
 		text-transform: uppercase;
 		background-color: $red;
 		transition: .25s;
+		@include media-breakpoint-up(xl) {
+			font-size: 1.75rem;
+		}
 		&:hover {
 			color: $red;
 			text-decoration: none;
 			background-color: $white;
+		}
+	}
+}
+
+.signup {
+	position: relative;
+	z-index: 9999;
+    margin-bottom: -24px;
+	&__header {
+		margin-bottom: 8px;
+		font-family: "Authority";
+		font-size: 4.8rem;
+		line-height: 1;
+		color: $yellow;
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			font-size: 6.75rem;
+			text-align: left;
+		}
+	}
+	&__body {
+		@include media-breakpoint-up(xl) {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+	&__sidebar {
+		display: flex;
+		padding-right: 16px;
+		align-items: center;
+    	justify-content: center;
+    	@include media-breakpoint-up(xl) {
+    		width: 33%;
+    	}
+	}
+	&__form {
+		padding: 30px 35px;
+		background-color: $black;
+		@include media-breakpoint-up(xl) {
+			width: 66%;
+		}
+	}
+}
+
+.susb {
+	position: relative;
+	display: none;
+	@include media-breakpoint-up(xl) {
+		display: block;
+	}
+	&__type {
+		display: block;
+		line-height: 1.2;
+		text-transform: uppercase;
+		&--1 {
+			font-size: 2.25rem;
+			letter-spacing: 13.5px;
+		}
+		&--2 {
+			font-family: "Authority";
+			font-size: 7.25rem;
+			line-height: .8;
+			color: $yellow;
+		}
+		&--3 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-family: "Authority";
+			font-size: 6.9375rem;
+			line-height: 1;
+			color: $yellow;
+		}
+		&--4 {
+			padding: 17px 0 0 64px;
+			font-size: 1.6875rem;
+			letter-spacing: .9px;
+		}
+		&--5 {
+			padding-left: 64px;
+			font-size: 1.875rem;
+			letter-spacing: .9px;
+		}
+		&--6 {
+			padding-left: 64px;
+			font-size: 1rem;
+			letter-spacing: .3px;
+			color: $yellow;
 		}
 	}
 }
@@ -358,15 +528,26 @@
 
 .studio-badge {
 	position: absolute;
-	right: 0;
+	right: 50%;
 	bottom: 0;
-	width: 400px;
-	height: 400px;
+	width: 250px;
+	height: 250px;
 	font-size: 30px;
 	background-size: cover;
 	background-position: center;
 	border-radius: 400px;
-	transform: translateY(calc(100% + 20px));
+	transform: translateY(calc(100% + 40px)) translateX(50%);
+	@include media-breakpoint-up(xl) {
+		right: 0;
+		width: 300px;
+		height: 300px;
+		transform: translateY(calc(100% + 70px));
+	}
+	@include media-breakpoint-up(xl) {
+		width: 400px;
+		height: 400px;
+		transform: translateY(calc(100% + 20px));
+	}
 	&__meta {
 		position: absolute;
 		top: 50%;
@@ -378,10 +559,10 @@
 		transform: translate(-50%, -50%);
 	}
 	&__subtitle {
+		margin-bottom: 5px;
 		font-family: "ROBU";
 	}
 	&__title {
-		margin-bottom: 5px;
 		letter-spacing: .2px;
 		text-transform: uppercase;
 	}
@@ -391,30 +572,45 @@
 	position: relative;
 	margin: 50px 0 80px;
 	&__hey {
+		display: none;
 		font-family: "Authority";
 		font-size: 15.0625rem;
 		line-height: .85;
 		color: $yellow;
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
 	}
 	&__about {
-		position: absolute;
-		right: 0;
-		bottom: 0;
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	svg {
+		max-width: 100%;
 	}
 }
 
 .big-statement {
 	position: relative;
-	height: 668px;
+	height: 450px;
 	background-size: cover;
 	background-position: center;
+	@include media-breakpoint-up(lg) {
+		height: 668px;
+	}
 	&__banner {
 		position: absolute;
 		top: -29px;
 		left: 15px;
-		width: 372px;
+		width: 320px;
 		height: calc(100% + 29px);
 		background-color: $yellow;
+		@include media-breakpoint-up(lg) {
+			width: 372px;
+		}
 		&::after {
 			position: absolute;
 			top: 0;
@@ -431,10 +627,14 @@
 			left: 0;
 			width: 0;
 			height: 0;
-			border-left: 186px solid transparent;
-			border-right: 186px solid transparent;
+			border-left: 160px solid transparent;
+			border-right: 160px solid transparent;
 			border-top: 75px solid $yellow;
 			content: "";
+			@include media-breakpoint-up(lg) {
+				border-left: 186px solid transparent;
+				border-right: 186px solid transparent;
+			}
 		}
 	}
 	&__banner-text {
@@ -442,13 +642,18 @@
 		top: 50%;
 		left: 50%;
 		padding: 110px 35px;
-		font-size: 28px;
-		letter-spacing: 3.5px;
-		line-height: 52px;
+		font-size: 24px;
+		letter-spacing: 2px;
+		line-height: 42px;
 		text-align: center;
 		color: $white;
 		text-transform: uppercase;
 		transform: translate(-50%, -50%);
+		@include media-breakpoint-up(lg) {
+			font-size: 28px;
+			letter-spacing: 3.5px;
+			line-height: 52px;
+		}
 		&::after,
 		&::before {
 			position: absolute;

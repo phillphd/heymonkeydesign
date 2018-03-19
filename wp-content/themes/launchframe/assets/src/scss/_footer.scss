@@ -3,25 +3,38 @@
 	text-align: center;
 	background-color: $black;
 	&__row {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: no-wrap;
 		border-bottom: 2px solid $white;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: no-wrap;
+		}
 		&:first-child .site-footer__col {
-			padding-top: 86px;
+			padding-top: 60px;
+			@include media-breakpoint-up(lg) {
+				padding-top: 86px;
+			}
 		}
 	}
 	&__col {
 		padding: 22px 40px;
-		border-right: 2px solid $white;
+		@include media-breakpoint-up(lg) {
+			border-right: 2px solid $white;
+		}
 		&:last-child {
 			border-right: 0;
 		}
 		&--4 {
-			width: 33%;
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				width: 33%;
+			}
 		}
 		&--8 {
-			width: 66%;
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				width: 66%;
+			}
 		}
 	}
 	&__base {
@@ -60,6 +73,7 @@
 	}
 	&__info {
 		font-size: 18px;
+		text-align: left;
 	}
 }
 
@@ -79,10 +93,19 @@
 		margin-bottom: 14px;
 	}
 	&__name {
-		font-size: 24px;
+		font-size: 18px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		transition: .2s;
+		@include media-breakpoint-up(lg) {
+			font-size: 24px;
+		}
+	}
+	svg {
+		max-width: 40px;
+		@include media-breakpoint-up(lg) {
+			max-width: 60px;
+		}	
 	}
 	a {
 		color: $yellow;
